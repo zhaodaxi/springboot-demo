@@ -15,7 +15,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * @Author : Joe
  * Created : 17:30 2019/11/18
- * Description :
+ * Description :Redis配置
  */
 @Configuration
 @EnableCaching
