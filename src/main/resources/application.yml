@@ -1,4 +1,22 @@
+server:
+  servlet:
+    context-path: /
+  port: 9999
+
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    db-type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://122.51.55.27:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 960426daxi
   redis:
     database: 0
     host: 122.51.55.27
@@ -11,3 +29,11 @@ spring:
         max-active: 8
         max-wait: -1
     timeout: 5000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+#    show-sql: true
